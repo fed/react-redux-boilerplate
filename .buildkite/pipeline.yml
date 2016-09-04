@@ -1,0 +1,26 @@
+steps:
+  # Test all the things!
+  - name: ":tada: Run Test Suite"
+    command: ".buildkite/tests.sh"
+
+  - wait
+
+  # Deploy develop branch to http://dev.argendev.com
+  - name: ":hammer: Deploy development environment to AWS"
+    command: ".buildkite/dev.sh"
+    branches: "develop"
+    timeout_in_minutes: 60
+    env:
+      AWS_ACCESS_KEY_ID: 'X'
+      AWS_SECRET_ACCESS_KEY: 'X'
+      AWS_DEFAULT_REGION: 'X'
+
+  # Deploy master branch to http://stage.argendev.com
+  - name: ":rocket: Deploy staging environment to AWS"
+    command: ".buildkite/stage.sh"
+    branches: "master"
+    timeout_in_minutes: 60
+    env:
+      AWS_ACCESS_KEY_ID: 'X'
+      AWS_SECRET_ACCESS_KEY: 'X'
+      AWS_DEFAULT_REGION: 'X'

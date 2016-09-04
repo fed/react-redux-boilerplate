@@ -1,0 +1,7 @@
+@value colors: "../../styles/colors.css";
+@value white from colors;
+
+.contentWrapper {
+  background-color: white;
+  padding: 20px;
+}

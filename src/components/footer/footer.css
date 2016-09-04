@@ -1,0 +1,20 @@
+@value colors: "../../styles/colors.css";
+@value ivory, lightGray, midGray from colors;
+
+.footer {
+  background-color: ivory;
+  border-top: 1px solid lightGray;
+  color: midGrey;
+  font-size: 12px;
+  padding: 10px;
+
+  li {
+    display: inline-block;
+    margin-right: 25px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,22 @@
+@value colors: "../../styles/colors.css";
+@value white, darkGray from colors;
+
+.header {
+  align-items: center;
+  background-color: darkGray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 25px 50px;
+}
+
+.headerTitle {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.headerImage {
+  width: 60px;
+}

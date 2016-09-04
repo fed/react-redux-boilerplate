@@ -1,0 +1,39 @@
+@value colors: "../../styles/colors.css";
+@value white, green, yellow, red, blue, midGray from colors;
+
+.button {
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 7px 7px 0;
+  padding: 12px 17px;
+  text-transform: uppercase;
+}
+
+.buttonSuccess {
+  background-color: green;
+  composes: button;
+}
+
+.buttonWarning {
+  background-color: yellow;
+  composes: button;
+}
+
+.buttonDanger {
+  background-color: red;
+  composes: button;
+}
+
+.buttonInfo {
+  background-color: blue;
+  composes: button;
+}
+
+.buttonDefault {
+  background-color: midGray;
+  composes: button;
+}

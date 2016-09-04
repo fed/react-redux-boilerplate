@@ -1,0 +1,48 @@
+@value colors: "../../styles/colors.css";
+@value white, green, blue, midGray from colors;
+
+.alert {
+  color: white;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 3;
+}
+
+.alertSuccess {
+  background-color: green;
+  composes: alert;
+}
+
+.alertInfo {
+  background-color: blue;
+  composes: alert;
+}
+
+.alertError {
+  background-color: red;
+  composes: alert;
+}
+
+.alertDefault {
+  background-color: midGray;
+  composes: alert;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  top: 4px;
+
+  img {
+    height: 12px;
+    width: 15px;
+  }
+}
