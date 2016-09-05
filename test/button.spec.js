@@ -16,6 +16,6 @@ describe('Button', () => {
     const spy = sinon.spy(console, 'log');
 
     button.simulate('click');
-    sinon.assert.called(spy);
+    sinon.assert.calledWith(spy, 'You have just clicked on the button');
   });
 });

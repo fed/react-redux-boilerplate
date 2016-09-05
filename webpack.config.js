@@ -62,7 +62,7 @@ module.exports = {
     new StyleLintPlugin({
       configFile: '.stylelintrc',
       context: 'src',
-      files: 'styles/*.css',
+      files: '{,**/}*.css',
       failOnError: false,
       quiet: false
     })
