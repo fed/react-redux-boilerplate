@@ -24,6 +24,7 @@
 |---------|-------------|
 | `yarn install` | Fetch dependencies and build binaries for any of the modules |
 | `npm start` | Fire up Webpack Dev Server, app will go live on `http://localhost:6789` |
+| `npm run storybook` | Fire up Storybook on `http://localhost:6006` |
 | `npm run clean` | Remove `build` and `node_modules` directories |
 | `npm run build:dev` | Build `bundle.js` using the `development` environment |
 | `npm run build:staging` | Build `bundle.js` using the `staging` environment |
