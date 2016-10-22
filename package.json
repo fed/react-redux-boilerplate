@@ -19,7 +19,9 @@
     "build:dev": "NODE_ENV=development webpack -d --progress --colors",
     "build:staging": "NODE_ENV=staging webpack -d --progress --colors",
     "build:prod": "NODE_ENV=production webpack -p --progress --colors",
-    "test": "mocha --require babel-core/register --require ignore-styles test/config.js test/**/*.spec.js"
+    "test": "mocha --require babel-core/register --require ignore-styles test/config.js test/**/*.spec.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
@@ -57,6 +59,7 @@
     "stylelint-webpack-plugin": "^0.4.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.0"
+    "webpack-dev-server": "^1.15.0",
+    "@kadira/storybook": "^2.21.0"
   }
 }
