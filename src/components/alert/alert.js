@@ -22,15 +22,12 @@ function getClassName(type) {
   return className;
 }
 
-const Alert = ({message, type, isVisible, hideAlert}) => {
+const Alert = ({ message, type, isVisible, hideAlert }) => {
   if (isVisible) {
     return (
       <div className={getClassName(type)}>
         {message}
-
-        <button className={styles.closeButton} onClick={hideAlert}>
-          <img src={closeIcon} alt="Close Alert" />
-        </button>
+        <img src={closeIcon} alt="Close Alert" className={styles.closeButton} onClick={hideAlert} />
       </div>
     );
   } else {

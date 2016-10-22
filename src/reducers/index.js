@@ -5,7 +5,7 @@ import spinner from './spinner';
 
 const rootReducer = combineReducers({
   alert,
-  spinner
+  loading: spinner
 });
 
 export default rootReducer;

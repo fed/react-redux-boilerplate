@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './spinner.css';
-import img from './spinner.gif';
+import spinner from './spinner.png';
 
-const Spinner = ({loading}) => {
-  if (loading) {
+const Spinner = ({ isVisible }) => {
+  if (isVisible) {
     return (
-      <div className={styles.spinnerWrapper}>
-        <img src={img} className={styles.spinnerLoader} />
+      <div className={styles.overlay}>
+        <div className={styles.wrapper}>
+          <img src={spinner} className={styles.spinner} />
+        </div>
       </div>
     );
   } else {
@@ -15,7 +17,7 @@ const Spinner = ({loading}) => {
 };
 
 Spinner.propTypes = {
-  loading: React.PropTypes.bool.isRequired
+  isVisible: React.PropTypes.bool.isRequired
 };
 
 export default Spinner;

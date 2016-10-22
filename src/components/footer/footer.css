@@ -1,5 +1,4 @@
-@value colors: "../../styles/colors.css";
-@value ivory, lightGray, midGray from colors;
+@value ivory, lightGray, midGray from "../../styles/colors.css";
 
 .footer {
   background-color: ivory;

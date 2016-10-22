@@ -1,21 +1,14 @@
-import assign from 'lodash/assign';
-import {SHOW_SPINNER, HIDE_SPINNER} from '../actions/types';
+import {SHOW_SPINNER, HIDE_SPINNER} from '../types';
 
-const initialState = {
-  loading: false
-};
+const initialState = false;
 
-export default function alert(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case SHOW_SPINNER:
-      return assign({}, state, {
-        loading: true
-      });
+      return true;
 
     case HIDE_SPINNER:
-      return assign({}, state, {
-        loading: false
-      });
+      return false;
 
     default:
       return state;

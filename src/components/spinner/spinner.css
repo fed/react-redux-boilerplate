@@ -1,8 +1,8 @@
 @value zIndexWrapper: 9999;
 @value zIndexSpinner: zIndexWrapper + 1;
 
-.spinnerWrapper {
-  background-color: rgba(0, 0, 0, 0.9);
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -11,11 +11,21 @@
   z-index: zIndexWrapper;
 }
 
-.spinnerLoader {
+.wrapper {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
   z-index: zIndexSpinner;
+}
+
+.spinner {
+  animation: spin 2s linear infinite;
+  width: 60px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }

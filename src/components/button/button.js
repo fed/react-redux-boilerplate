@@ -24,17 +24,18 @@ function getClassName(type) {
   return className;
 }
 
-function handleClick() {
-  console.log('You have just clicked on the button');
-}
-
-const Button = ({title, type}) => (
-  <button className={getClassName(type)} onClick={handleClick}>{title}</button>
+const Button = ({ title, type, action }) => (
+  <button className={getClassName(type)} onClick={action}>{title}</button>
 );
+
+Button.defaultProps = {
+  action: () => console.log('You have just clicked on the button')
+};
 
 Button.propTypes = {
   title: React.PropTypes.string.isRequired,
-  type: React.PropTypes.string
+  type: React.PropTypes.string,
+  action: React.PropTypes.func
 };
 
 export default Button;

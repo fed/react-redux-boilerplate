@@ -1,5 +1,4 @@
-@value colors: "../../styles/colors.css";
-@value white, green, yellow, red, blue, midGray from colors;
+@value green, yellow, red, blue, midGray from "../../styles/colors.css";
 
 .button {
   border: 0;

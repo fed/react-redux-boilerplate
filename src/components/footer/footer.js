@@ -9,7 +9,8 @@ const Footer = () => (
         <li><Link to="/about">About</Link></li>
         <li><Link to="/features">Features</Link></li>
         <li><Link to="/pricing">Pricing</Link></li>
-        <li>© 2016 React Boilerplate</li>
+        <li><Link to="/contact">Contact Us</Link></li>
+        <li><a href="https://github.com/fknussel" target="_blank">React & Redux Boilerplate</a> by <a href="https://twitter.com/fknussel" target="_blank">@fknussel</a></li>
       </ul>
     </nav>
   </footer>

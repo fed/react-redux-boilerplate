@@ -1,5 +1,4 @@
-@value colors: "../../styles/colors.css";
-@value white, green, blue, midGray from colors;
+@value green, blue, midGray from "../../styles/colors.css";
 
 .alert {
   color: white;
@@ -33,16 +32,11 @@
 }
 
 .closeButton {
-  background: transparent;
-  border: none;
   cursor: pointer;
-  padding: 10px;
-  position: fixed;
-  right: 10px;
-  top: 4px;
-
-  img {
-    height: 12px;
-    width: 15px;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  height: 12px;
+  width: 15px;
 }

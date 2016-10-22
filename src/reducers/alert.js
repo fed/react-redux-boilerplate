@@ -1,17 +1,17 @@
 import assign from 'lodash/assign';
-import {SHOW_ALERT, HIDE_ALERT} from '../actions/types';
+import {SHOW_ALERT, HIDE_ALERT} from '../types';
 
 const initialState = {
   isVisible: false
 };
 
-export default function alert(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case SHOW_ALERT:
       return assign({}, state, {
         isVisible: true,
-        message: action.message,
-        alertType: action.alertType
+        message: action.payload.message,
+        type: action.payload.type
       });
 
     case HIDE_ALERT:

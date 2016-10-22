@@ -2,8 +2,10 @@ import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import actionCreators from '../actions';
+// Redux Actions
+import {hideAlert} from '../actions/alert';
 
+// Components
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 import Alert from '../components/alert/alert';
@@ -12,7 +14,7 @@ import Spinner from '../components/spinner/spinner';
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <section>
         <Header />
         {this.props.children}
         <Footer />
@@ -20,39 +22,37 @@ class App extends React.Component {
         <Alert
           isVisible={this.props.alert.isVisible}
           message={this.props.alert.message}
-          type={this.props.alert.alertType}
-          hideAlert={this.props.actions.hideAlert.bind(this)} />
+          type={this.props.alert.type}
+          hideAlert={this.props.hideAlert.bind(this)} />
 
-        <Spinner
-          {...this.props.spinner}
-          hideSpinner={this.props.actions.hideSpinner.bind(this)} />
-      </div>
+        <Spinner isVisible={this.props.loading} />
+      </section>
     );
   }
 }
 
 App.propTypes = {
+  // React & React Router (ownProps)
   children: React.PropTypes.node,
-  actions: React.PropTypes.object.isRequired,
-  location: React.PropTypes.object,
+  location: React.PropTypes.object.isRequired,
+
+  // Redux actions
+  hideAlert: React.PropTypes.func.isRequired,
+
+  // Redux state
   alert: React.PropTypes.object.isRequired,
-  spinner: React.PropTypes.object.isRequired
+  loading: React.PropTypes.bool.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     alert: state.alert,
-    spinner: state.spinner
+    loading: state.loading
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(actionCreators, dispatch)
-  };
+  return bindActionCreators({ hideAlert }, dispatch);
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
