@@ -15,9 +15,9 @@ steps:
       AWS_SECRET_ACCESS_KEY: 'X'
       AWS_DEFAULT_REGION: 'X'
 
-  # Deploy master branch to http://stage.argendev.com
+  # Deploy master branch to http://staging.argendev.com
   - name: ":rocket: Deploy staging environment to AWS"
-    command: ".buildkite/stage.sh"
+    command: ".buildkite/staging.sh"
     branches: "master"
     timeout_in_minutes: 60
     env:

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "*****************************"
-echo "*     SETUP ENVIRONMENT     *"
+echo "*     ENVIRONMENT SETUP     *"
 echo "*****************************"
 
 # Check if Homebrew installed
@@ -25,6 +25,17 @@ else
   echo "Node is already installed."
 fi
 
+# Check if Yarn is installed
+export PATH="$HOME/.yarn/bin:$PATH"
+
+which -s yarn
+if [[ $? != 0 ]] ; then
+  echo "Yarn is not installed."
+  curl -o- -L https://yarnpkg.com/install.sh | bash
+else
+  echo "Yarn is already installed."
+fi
+
 if [ $? -ne 0 ]; then
   echo "Failed setup dev environment"
   exit
@@ -33,19 +44,19 @@ else
 fi
 
 echo "*****************************"
-echo "*        NPM INSTALL        *"
-echo "*****************************"
-
-npm install
-
-echo "*****************************"
-echo "*        NPM CLEAN          *"
+echo "* REMOVE DEPS AND BUILD DIR *"
 echo "*****************************"
 
 npm run clean
 
 echo "*****************************"
+echo "*    FETCH NODE MODULES     *"
+echo "*****************************"
+
+yarn install
+
+echo "*****************************"
 echo "*         NPM TEST         *"
 echo "*****************************"
 
-npm run test
+npm test
