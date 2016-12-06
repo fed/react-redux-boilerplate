@@ -1,5 +1,4 @@
-@value colors: "./colors.css";
-@value ivory, darkGray from colors;
+@value ivory, darkGray from "./variables.css";
 
 :global {
   body {

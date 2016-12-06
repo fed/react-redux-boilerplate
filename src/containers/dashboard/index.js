@@ -1,10 +1,10 @@
 import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {showAlert, hideAlert} from '../../actions/alert';
-import {showSpinner} from '../../actions/spinner';
-import Button from '../../components/button/button';
-import styles from './dashboard.css';
+import {showAlert, hideAlert} from 'actions/alert';
+import {showSpinner} from 'actions/spinner';
+import Button from 'components/button';
+import styles from './styles.css';
 
 class Dashboard extends React.Component {
   render() {

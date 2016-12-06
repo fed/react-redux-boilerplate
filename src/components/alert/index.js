@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './alert.css';
+import styles from './styles.css';
 import closeIcon from './close.svg';
 
 function getClassName(type) {

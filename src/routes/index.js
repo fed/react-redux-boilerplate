@@ -2,9 +2,9 @@ import React from 'react';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 // Components
-import App from '../containers/app';
-import Dashboard from '../containers/dashboard/dashboard';
-import NoMatch from '../components/noMatch/noMatch';
+import App from 'containers/app';
+import Dashboard from 'containers/dashboard';
+import NoMatch from 'components/noMatch';
 
 // Route Definition
 const routes = (

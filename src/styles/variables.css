@@ -1,3 +1,4 @@
+/* Colors */
 @value green: #3cca5e;
 @value blue: #056ef0;
 @value yellow: #ffd11a;
@@ -9,3 +10,7 @@
 @value midGray: #788090;
 @value lightGray: #dedede;
 @value ivory: #f7f7f7;
+
+/* Breakpoints */
+@value bp-small: (max-width: 600px);
+@value bp-medium: (max-width: 800px);

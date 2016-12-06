@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './spinner.css';
+import styles from './styles.css';
 import spinner from './spinner.png';
 
 const Spinner = ({ isVisible }) => {

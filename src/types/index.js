@@ -1,7 +1,7 @@
 // Alerts
-export const SHOW_ALERT = 'SHOW_ALERT';
-export const HIDE_ALERT = 'HIDE_ALERT';
+export const SHOW_ALERT = 'ALERT/SHOW';
+export const HIDE_ALERT = 'ALERT/HIDE';
 
 // Loading Spinner
-export const SHOW_SPINNER = 'SHOW_SPINNER';
-export const HIDE_SPINNER = 'HIDE_SPINNER';
+export const SHOW_SPINNER = 'SPINNER/SHOW';
+export const HIDE_SPINNER = 'SPINNER/HIDE';

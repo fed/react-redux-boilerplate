@@ -1,4 +1,4 @@
-@value darkGray from "../../styles/colors.css";
+@value darkGray from "../../styles/variables.css";
 
 .header {
   align-items: center;

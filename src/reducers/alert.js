@@ -1,5 +1,5 @@
 import assign from 'lodash/assign';
-import {SHOW_ALERT, HIDE_ALERT} from '../types';
+import {SHOW_ALERT, HIDE_ALERT} from 'types';
 
 const initialState = {
   isVisible: false

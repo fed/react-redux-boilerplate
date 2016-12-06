@@ -1,4 +1,4 @@
-@value green, blue, midGray from "../../styles/colors.css";
+@value green, blue, midGray from "../../styles/variables.css";
 
 .alert {
   color: white;

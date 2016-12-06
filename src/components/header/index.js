@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import styles from './header.css';
+import styles from './styles.css';
 import reactLogo from './react.svg';
 import reduxLogo from './redux.svg';
 

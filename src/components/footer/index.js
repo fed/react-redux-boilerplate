@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import styles from './footer.css';
+import styles from './styles.css';
 
 const Footer = () => (
   <footer className={styles.footer}>

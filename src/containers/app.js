@@ -3,13 +3,13 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
 // Redux Actions
-import {hideAlert} from '../actions/alert';
+import {hideAlert} from 'actions/alert';
 
 // Components
-import Header from '../components/header/header';
-import Footer from '../components/footer/footer';
-import Alert from '../components/alert/alert';
-import Spinner from '../components/spinner/spinner';
+import Header from 'components/header';
+import Footer from 'components/footer';
+import Alert from 'components/alert';
+import Spinner from 'components/spinner';
 
 class App extends React.Component {
   render() {

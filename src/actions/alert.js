@@ -1,4 +1,4 @@
-import {SHOW_ALERT, HIDE_ALERT} from '../types';
+import {SHOW_ALERT, HIDE_ALERT} from 'types';
 
 /**
  * Displays a sticky alert on the top of the page

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import {wrapper} from './noMatch.css';
+import {wrapper} from './styles.css';
 import notFoundIcon from './404.svg';
 
 export default class NoMatch extends React.Component {

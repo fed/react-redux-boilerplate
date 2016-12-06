@@ -1,4 +1,4 @@
-import {SHOW_SPINNER, HIDE_SPINNER} from '../types';
+import {SHOW_SPINNER, HIDE_SPINNER} from 'types';
 
 /**
  * Displays a loading spinner in the middle of the screen
