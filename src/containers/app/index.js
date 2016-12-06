@@ -16,7 +16,9 @@ class App extends React.Component {
     return (
       <section>
         <Header />
+
         {this.props.children}
+
         <Footer />
 
         <Alert

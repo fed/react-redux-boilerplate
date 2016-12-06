@@ -1,19 +1,15 @@
 import React from 'react';
 import styles from './styles.css';
-import spinner from './spinner.png';
+import spinnerImage from './spinner.png';
 
 const Spinner = ({ isVisible }) => {
-  if (isVisible) {
-    return (
-      <div className={styles.overlay}>
-        <div className={styles.wrapper}>
-          <img src={spinner} className={styles.spinner} />
-        </div>
+  return isVisible && (
+    <div className={styles.overlay}>
+      <div className={styles.wrapper}>
+        <img src={spinnerImage} className={styles.spinner} />
       </div>
-    );
-  } else {
-    return null;
-  }
+    </div>
+  );
 };
 
 Spinner.propTypes = {
