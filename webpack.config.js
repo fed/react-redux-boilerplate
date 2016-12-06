@@ -2,7 +2,9 @@ var webpack = require('webpack');
 var values = require('postcss-modules-values');
 var precss = require('precss');
 var autoprefixer = require('autoprefixer');
+var path = require('path');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var VersionFile = require('webpack-version-file');
 
 module.exports = {
   entry: './src',
@@ -26,7 +28,7 @@ module.exports = {
     ],
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel'
       },
@@ -36,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+        loader: 'url-loader?limit=100000&mimetype=image/svg+xml'
       },
       {
         test: /\.png$/,
@@ -51,6 +53,9 @@ module.exports = {
     failOnWarning: false,
     failOnError: true
   },
+  resolve: {
+    root: [path.resolve('./src/')]
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
@@ -61,6 +66,13 @@ module.exports = {
       files: '{,**/}*.css',
       failOnError: false,
       quiet: false
+    }),
+    new VersionFile({
+      output: './build/version.txt',
+      templateString: '<%= name %>@<%= version %>\nBuild date: <%= buildDate %>\nEnvironment: <%= env %>',
+      data: {
+        env: process.env.NODE_ENV || 'development'
+      }
     })
   ]
 };

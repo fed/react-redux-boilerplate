@@ -24,6 +24,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.5",
@@ -60,6 +61,6 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0",
-    "@kadira/storybook": "^2.21.0"
+    "webpack-version-file": "^0.1.1"
   }
 }
