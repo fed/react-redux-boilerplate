@@ -17,29 +17,25 @@ class Dashboard extends React.Component {
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
           qui officia deserunt mollit anim id est laborum.</p>
 
-        <Button
-          title="Trigger a success alert"
-          type="success"
-          action={this.props.showAlert.bind(null, 'Hello world', 'success')} />
+        <Button className={styles.button} type="success" onClick={() => this.props.showAlert('Hello world', 'success')}>
+          Trigger a success alert
+        </Button>
 
-        <Button
-          title="Trigger an error alert"
-          type="danger"
-          action={this.props.showAlert.bind(null, 'Hello world', 'error')} />
+        <Button className={styles.button} type="danger" onClick={() => this.props.showAlert('Hello world', 'error')}>
+          Trigger an error alert
+        </Button>
 
-        <Button
-          title="Trigger an info alert"
-          type="info"
-          action={this.props.showAlert.bind(null, 'Hello world', 'info')} />
+        <Button className={styles.button} type="primary" onClick={() => this.props.showAlert('Hello world', 'info')}>
+          Trigger an info alert
+        </Button>
 
-        <Button
-          title="Hide the alert"
-          type="warning"
-          action={this.props.hideAlert} />
+        <Button className={styles.button} onClick={this.props.hideAlert}>
+          Hide the alert
+        </Button>
 
-        <Button
-          title="Display the loading spinner"
-          action={this.props.showSpinner} />
+        <Button className={styles.button} onClick={this.props.showSpinner}>
+          Display the loading spinner
+        </Button>
       </section>
     );
   }

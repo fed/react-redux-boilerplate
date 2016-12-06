@@ -1,38 +1,51 @@
-@value green, yellow, red, blue, midGray from "../../styles/variables.css";
+@value fontBrand, red, green, blue, darkGray, lightGray from "../../styles/variables.css";
 
 .button {
-  border: 0;
+  border: none;
   border-radius: 3px;
-  color: white;
+  color: #fff;
   cursor: pointer;
-  font-size: 12px;
+  font-family: fontBrand;
   font-weight: 500;
-  margin: 0 7px 7px 0;
-  padding: 12px 17px;
-  text-transform: uppercase;
+  min-width: 70px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
 }
 
-.buttonSuccess {
-  background-color: green;
-  composes: button;
-}
-
-.buttonWarning {
-  background-color: yellow;
-  composes: button;
-}
-
-.buttonDanger {
-  background-color: red;
-  composes: button;
-}
-
-.buttonInfo {
+/* Types (Colors) */
+.buttonBlue {
   background-color: blue;
-  composes: button;
 }
 
-.buttonDefault {
-  background-color: midGray;
-  composes: button;
+.buttonRed {
+  background-color: red;
+}
+
+.buttonGreen {
+  background-color: green;
+}
+
+.buttonWhite {
+  background-color: #fff;
+  border: 1px solid lightGray;
+  color: darkGray;
+}
+
+/* Sizes */
+.buttonSmall {
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.buttonMedium {
+  font-size: 14px;
+  padding: 12px 17px 11px;
+}
+
+.buttonLarge {
+  font-size: 16px;
+  padding: 18px;
 }

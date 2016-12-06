@@ -1,41 +1,65 @@
 import React from 'react';
+import classnames from 'classnames';
 import styles from './styles.css';
 
-function getClassName(type) {
-  let className;
-
+const getTypeClassName = (type) => {
   switch (type) {
-    case 'success':
-      className = styles.buttonSuccess;
-      break;
+    case 'primary':
+      return styles.buttonBlue;
     case 'danger':
-      className = styles.buttonDanger;
-      break;
-    case 'warning':
-      className = styles.buttonWarning;
-      break;
-    case 'info':
-      className = styles.buttonInfo;
-      break;
+      return styles.buttonRed;
+    case 'success':
+      return styles.buttonGreen;
     default:
-      className = styles.buttonDefault;
+      return styles.buttonWhite;
   }
+};
 
-  return className;
-}
+const getSizeClassName = (size) => {
+  switch (size) {
+    case 'small':
+      return styles.buttonSmall;
+    case 'large':
+      return styles.buttonLarge;
+    default:
+      return styles.buttonMedium;
+  }
+};
 
-const Button = ({ title, type, action }) => (
-  <button className={getClassName(type)} onClick={action}>{title}</button>
-);
+const Button = ({ type, size, disabled, onClick, children, className }) => {
+  const buttonClassName = classnames(
+    styles.button,
+    getTypeClassName(type),
+    getSizeClassName(size),
+    className
+  );
+
+  return (
+    <button type="button" className={buttonClassName} disabled={disabled} onClick={onClick}>
+      {children}
+    </button>
+  );
+};
 
 Button.defaultProps = {
-  action: () => console.log('You have just clicked on the button')
+  onClick: () => {}
 };
 
 Button.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  type: React.PropTypes.string,
-  action: React.PropTypes.func
+  className: React.PropTypes.string,
+  disabled: React.PropTypes.bool,
+  onClick: React.PropTypes.func,
+  children: React.PropTypes.string,
+  size: React.PropTypes.oneOf([
+    'small',
+    'medium',
+    'large'
+  ]),
+  type: React.PropTypes.oneOf([
+    'primary',
+    'danger',
+    'success'
+  ])
 };
 
 export default Button;

@@ -1,3 +1,6 @@
+/* Typography */
+@value fontBrand: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 /* Colors */
 @value green: #3cca5e;
 @value blue: #056ef0;

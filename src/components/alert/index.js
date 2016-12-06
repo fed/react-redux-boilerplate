@@ -2,42 +2,33 @@ import React from 'react';
 import styles from './styles.css';
 import closeIcon from './close.svg';
 
-function getClassName(type) {
-  let className;
-
-  switch (type) {
+const getAlertClassName = (alertType) => {
+  switch (alertType) {
     case 'success':
-      className = styles.alertSuccess;
-      break;
-    case 'info':
-      className = styles.alertInfo;
-      break;
+      return styles.alertSuccess;
     case 'error':
-      className = styles.alertError;
-      break;
+      return styles.alertError;
+    case 'info':
+      return styles.alertInfo;
     default:
-      className = styles.alertDefault;
+      return styles.alertDefault;
   }
+};
 
-  return className;
-}
+const Alert = ({ isVisible, type, message, hideAlert }) => {
+  const className = getAlertClassName(type);
 
-const Alert = ({ message, type, isVisible, hideAlert }) => {
-  if (isVisible) {
-    return (
-      <div className={getClassName(type)}>
-        {message}
-        <img src={closeIcon} alt="Close Alert" className={styles.closeButton} onClick={hideAlert} />
-      </div>
-    );
-  } else {
-    return null;
-  }
+  return isVisible && (
+    <div className={className}>
+      {message}
+      <img className={styles.closeButton} src={closeIcon} onClick={hideAlert} alt="Dismiss" />
+    </div>
+  );
 };
 
 Alert.propTypes = {
   message: React.PropTypes.string,
-  type: React.PropTypes.string,
+  type: React.PropTypes.oneOf(['success', 'error', 'info']),
   isVisible: React.PropTypes.bool.isRequired,
   hideAlert: React.PropTypes.func.isRequired
 };
