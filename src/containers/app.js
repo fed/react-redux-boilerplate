@@ -20,12 +20,12 @@ class App extends React.Component {
         <Footer />
 
         <Alert
-          isVisible={this.props.alert.isVisible}
-          message={this.props.alert.message}
-          type={this.props.alert.type}
+          isVisible={this.props.alert.get('isVisible')}
+          message={this.props.alert.get('message')}
+          type={this.props.alert.get('type')}
           hideAlert={this.props.hideAlert.bind(this)} />
 
-        <Spinner isVisible={this.props.loading} />
+        <Spinner isVisible={this.props.spinner.get('isVisible')} />
       </section>
     );
   }
@@ -41,13 +41,13 @@ App.propTypes = {
 
   // Redux state
   alert: React.PropTypes.object.isRequired,
-  loading: React.PropTypes.bool.isRequired
+  spinner: React.PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     alert: state.alert,
-    loading: state.loading
+    spinner: state.spinner
   };
 }
 
