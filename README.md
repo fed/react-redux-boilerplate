@@ -1,4 +1,4 @@
-# React & Redux Boilerplate
+# React & Redux Boilerplate ![Dependencies](https://david-dm.org/fknussel/react-redux-boilerplate/dev-status.svg)
 
 ![React & Redux Boilerplate](http://i.imgur.com/Agl5kuk.png)
 
@@ -65,4 +65,4 @@ These scripts handle: setting up the environment by installing necessary depende
 
 ## Contributing
 
-Please raise an issue or create a PR if you find a better way to do things or know of a nicer configuration 🙂
+Please submit an issue or create a PR if you find a better way to do things or know of a nicer configuration 🙂
