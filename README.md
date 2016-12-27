@@ -1,6 +1,6 @@
 # React & Redux Boilerplate
 
-![React & Redux Boilerplate](http://i.imgur.com/kHbBovB.png)
+![React & Redux Boilerplate](http://i.imgur.com/Agl5kuk.png)
 
 * UI Library: [React](https://facebook.github.io/react/)
 * Routing Library: [React Router](https://github.com/reactjs/react-router)
