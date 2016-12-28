@@ -11,32 +11,27 @@ import Footer from 'components/footer';
 import Alert from 'components/alert';
 import Spinner from 'components/spinner';
 
-class App extends React.Component {
-  render() {
-    return (
-      <section>
-        <Header />
+const App = ({ children, spinner, alert, hideAlert }) => (
+  <section>
+    <Header />
 
-        {this.props.children}
+    {children}
 
-        <Footer />
+    <Footer />
 
-        <Alert
-          isVisible={this.props.alert.get('isVisible')}
-          message={this.props.alert.get('message')}
-          type={this.props.alert.get('type')}
-          hideAlert={this.props.hideAlert.bind(this)} />
+    <Alert
+      isVisible={alert.get('isVisible')}
+      message={alert.get('message')}
+      type={alert.get('type')}
+      hideAlert={hideAlert.bind(this)} />
 
-        <Spinner isVisible={this.props.spinner.get('isVisible')} />
-      </section>
-    );
-  }
-}
+    <Spinner isVisible={spinner.get('isVisible')} />
+  </section>
+);
 
 App.propTypes = {
   // React & React Router (ownProps)
   children: React.PropTypes.node,
-  location: React.PropTypes.object.isRequired,
 
   // Redux actions
   hideAlert: React.PropTypes.func.isRequired,
