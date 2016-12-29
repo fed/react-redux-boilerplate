@@ -6,3 +6,4 @@
 [libs]
 
 [options]
+module.name_mapper='^.*\.css$' -> 'css-module-flow'
