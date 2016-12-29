@@ -1,3 +1,5 @@
-export function isDevelopmentEnvironment() {
+// @flow
+
+export function isDevelopmentEnvironment(): boolean {
   return process.env.NODE_ENV === 'development';
 }
