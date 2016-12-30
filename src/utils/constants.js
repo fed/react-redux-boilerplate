@@ -1,2 +1,4 @@
+// @flow
+
 // Endpoints
-export const API_ROOT_URL = 'http://api.argendev.com/v1/';
+export const API_ROOT_URL: string = 'http://api.argendev.com/v1/';

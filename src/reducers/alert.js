@@ -1,11 +1,14 @@
+// @flow
+
 import {Map} from 'immutable';
-import {SHOW_ALERT, HIDE_ALERT} from 'types';
+import {SHOW_ALERT, HIDE_ALERT} from '../types';
+import type {IAlertAction} from '../types';
 
 const initialState = Map({
   isVisible: false
 });
 
-export default function (state = initialState, action) {
+export default function (state: any = initialState, action: IAlertAction): any {
   switch (action.type) {
     case SHOW_ALERT:
       return state
