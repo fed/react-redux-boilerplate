@@ -9,6 +9,7 @@ var autoprefixer = require('autoprefixer');
 // Webpack plugins
 var StyleLintPlugin = require('stylelint-webpack-plugin');
 var VersionFile = require('webpack-version-file');
+var FlowtypePlugin = require('flowtype-loader/plugin');
 
 // Environment
 var environment = process.env.NODE_ENV || 'development';
@@ -36,6 +37,12 @@ module.exports = {
         // Lint all JS files
         test: /\.js$/,
         loader: 'eslint',
+        exclude: /node_modules/
+      },
+      {
+        // Flowtype
+        test: /\.js$/,
+        loader: 'flowtype',
         exclude: /node_modules/
       }
     ],
@@ -96,6 +103,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(environment)
     }),
+
+    // Flow loader for Webpack
+    new FlowtypePlugin(),
 
     // Lint all CSS files
     new StyleLintPlugin({
