@@ -12,7 +12,8 @@
   },
   "plugins": [
     "react",
-    "flowtype"
+    "flowtype",
+    "import"
   ],
   "env": {
     "browser": true,
@@ -38,6 +39,7 @@
     "consistent-this": ["warn", "self"],
     "curly": ["warn", "all"],
     "eqeqeq": ["warn", "smart"],
+    "import/named": 2,
     "indent": ["warn", 2, {"SwitchCase": 1}],
     "jsx-quotes": ["warn", "prefer-double"],
     "key-spacing": "warn",
