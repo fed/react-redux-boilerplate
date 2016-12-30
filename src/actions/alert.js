@@ -1,6 +1,7 @@
 // @flow
 
-import {SHOW_ALERT, HIDE_ALERT, IAlertAction, IBaseAction} from '../types';
+import {SHOW_ALERT, HIDE_ALERT} from '../types';
+import type {IAlertAction, IBaseAction} from '../types';
 
 /**
  * Displays a sticky alert on the top of the page

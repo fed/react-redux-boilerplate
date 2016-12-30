@@ -1,6 +1,7 @@
 // @flow
 
-import {SHOW_SPINNER, HIDE_SPINNER, ISpinnerAction} from '../types';
+import {SHOW_SPINNER, HIDE_SPINNER} from '../types';
+import type {ISpinnerAction} from '../types';
 
 /**
  * Displays a loading spinner in the middle of the screen
