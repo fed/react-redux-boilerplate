@@ -2,7 +2,7 @@
 
 ![React & Redux Boilerplate](http://i.imgur.com/Agl5kuk.png)
 
-This is a simple starter project I've put together after working on a bunch of React apps at work. It's **fairly opinionated**, with tools and decisions that make sense to me and my team. However, all of the libraries and tools I'm using here are pretty standard and widespread in the React community nowadays.
+This is a simple starter project I've put together after setting up a bunch of React apps at work. It's **fairly opinionated**, with tools and decisions that make sense to me and my team. However, all of the libraries and tools I'm using here are pretty standard and widespread in the React community nowadays.
 
 I've started this project probably before or at the same time [**create-react-app**](https://github.com/facebookincubator/create-react-app) became popular. Even though that generator is awesome and makes getting started with React really simple, I reckon it also makes it easy to ignore what's going on under the hood. For me, **knowing your tools** is really important (particularly in JavaScriptland where everything changes so fast, and understanding a concept/library might help you get the grips of the next big thing). That's why I'm still maintaining this project, as a way to help newcomers understand how the whole React ecosystems works together.
 
