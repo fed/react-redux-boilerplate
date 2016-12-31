@@ -21,7 +21,9 @@
     "build:prod": "NODE_ENV=production webpack -p --progress --colors",
     "test": "mocha --require babel-core/register --require ignore-styles test/config.js test/{,**/}*.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "precommit": "npm test",
+    "prepush": "npm test"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.34.0",
@@ -44,6 +46,7 @@
     "file-loader": "^0.9.0",
     "flow-bin": "^0.37.4",
     "flowtype-loader": "^0.2.2",
+    "husky": "^0.12.0",
     "ignore-styles": "^5.0.1",
     "immutable": "^3.8.1",
     "jsdom": "^9.8.3",
