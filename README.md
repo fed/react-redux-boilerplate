@@ -1,5 +1,9 @@
 # React & Redux Boilerplate ![Dependencies](https://david-dm.org/fknussel/react-redux-boilerplate/dev-status.svg)
 
+**DEPRECATION WARNING:** This project has been deprecated in favour of [custom-scripts](https://github.com/fknussel/custom-scripts) which uses Webpack 2 and a whole new way of thinking dev dependencies and build scripts for your project.
+
+---
+
 ![React & Redux Boilerplate](http://i.imgur.com/Agl5kuk.png)
 
 This is a simple starter project I've put together after setting up a bunch of React apps at work. It's **fairly opinionated**, with tools and decisions that make sense to me and my team. However, all of the libraries and tools I'm using here are pretty standard and widespread in the React community nowadays.
